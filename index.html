@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta & Stuffs -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title of Page -->
+        <title>M1ha1 Portofolio</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <img src="./assets/images/logo.png" alt="M1ha1 - Logo" draggable="false" />
+                <ul>
+                    <li class="link__hover-effect"><a href="#home_section" style="color: #fff; text-decoration: none;">Home</a></li>
+                    <li class="link__hover-effect" onclick="toggleModalTrue()">Contact</li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div id="home_section">
+                <section class="d-flex justify-content-between">
+                    <div class="home_content">
+                        <h1 class="home_text_main">Hey,</h1>
+                        <h1 class="home_text_main" style="color: #0087cd;">I'm M1ha1</h1>
+    
+                        <div class="d-flex">
+                            <a href="https://instagram.com/mihai.0623/" class="home_social"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="" class="home_social"><i class="fa-brands fa-github"></i></a>
+                            <a href="" class="home_social"><i class="fa-solid fa-file-lines"></i></a>
+                        </div>
+    
+                        <p class="home_text_paragraph">I'm a  <span class="text--blue text--bold">Frontend Developer </span>who dreams to reach the top tech companies.
+                            Here's a bit more <span class="cursor-pointer text--blue text--bold" onclick="toggleModalTrue()">about me</span>.</p>
+                    </div>
+                    <img src="./assets/images/me.png" alt="M1ha1 - Frontend"/>
+                </section>
+            </div>
+            <div class="modal">
+                <div class="modal__half modal__about">
+                    <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
+                    <h4 class="modal__sub-title modal__sub-title--about text--blue">Frontend Developer</h4>
+                    <div class="mode__para--container">
+                      <p class="model__para">
+                        I'm a 14 year-old Romanian
+                        <span class="text--blue text--bold">junior frontend developer</span> who
+                        aspires to build top tech like
+                        <span class="text--blue text--bold">user experiences.</span>
+                        <br/>
+                        I'm currently working on improving my
+                        <span class="text--blue text--bold">skills</span> and
+                        <span class="text--blue text--bold">team work</span> through
+                        harder and harder challenges as I go on. My biggest accomplishment
+                        is starting my
+                        <span class="text--blue text--bold">coding journey</span>
+                        and making myself
+                        <span class="text--blue text--bold">a better person</span>
+                        at the same time. Being a very
+                        <span class="text--blue text--bold">sociable</span>
+                        and
+                        <span class="text--blue text--bold"> friendly </span>
+                        person makes me able to work along with anyone I'm teamed up with.
+                      </p>
+                    </div>
+                    <h3 class="modal__languages--title text--blue text--bold mb" >Languages I know</h3>
+                    <div class="modal__languages">
+                        <figure class="modal__language--container">
+                            <img src="./assets/images/HTML5.png" class="modal__language--img" />
+                            <span class="language__name">HTML</span>
+                        </figure>
+                        <figure class="modal__language--container">
+                            <img src="./assets/images/CSS.png" class="modal__language--img" />
+                            <span class="language__name">CSS</span>
+                        </figure>
+                        <figure class="modal__language--container">
+                            <img src="./assets/images/JS.png" class="modal__language--img" />
+                            <span class="language__name">JavaScript</span>
+                        </figure>
+                        <figure class="modal__language--container">
+                            <img src="./assets/images/REACT.png" class="modal__language--img" />
+                            <span class="language__name">React</span>
+                        </figure>
+                        <figure class="modal__language--container">
+                            <img src="./assets/images/nodejs.png" class="modal__language--img" />
+                            <span class="language__name">NodeJs</span>
+                        </figure>
+                    </div>
+                </div>
+                <div class="modal__half modal__contact">
+                    <i class="fa-solid fa-times modal__exit click" onclick="toggleModalFalse()"></i>
+                    <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+                    <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new work.</h4>
+                    <form id="contact__form" onsubmit="contact(event)">
+                        <div class="form__item">
+                            <label class="form__item--label">Name</label>
+                            <input class="input" name="user_name" type="text" required />
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item--label">Email</label>
+                            <input class="input" name="user_email" type="email" required />
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item--label">Message</label>
+                            <textarea class="input message__area" name="message" required></textarea>
+                        </div>
+                        <button id="contact__submit" class="form__submit">Send it my way!</button>
+                    </form>
+                    <div class="modal__overlay modal__overlay--loading">
+                        <i class="fa-solid fa-spinner"></i>
+                    </div>
+                    <div class="modal__overlay modal__overlay--succes">
+                        <p class="overlay--succes__text">
+                          Thanks for the message!
+                          <br />
+                          I'll be in contact with you soon!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+
+        <!-- JavaScript -->
+        <script src="./index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </body>
+</html>
